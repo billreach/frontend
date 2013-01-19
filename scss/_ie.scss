@@ -1,0 +1,28 @@
+// IE "Fix" - pair this with the conditional block and it hides everything in old IE.
+	// hide everything.  and you know what?  fuck those guys.
+	@mixin iehide {
+		.lt-ie9 {
+			body {
+				background: #E3E5E5;
+				text-align: center;
+				
+				& > * {display: none;}
+				
+				& > .whatever-floats-your-boat {
+					display: block;
+					padding: 1em 0 5em 0;
+					font-family: Georgia, serif;
+					color: #666;
+				}
+			}
+			
+			.ie-wrap {
+				width: 600px;
+				margin: 0px auto;
+			}
+			.title {
+				font-size: 50px;
+				font-style: italic;
+			}
+		}
+	}

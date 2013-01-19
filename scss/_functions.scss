@@ -1,0 +1,59 @@
+// variables/mixins
+
+	// clearfix
+	@mixin clear {
+		*zoom: 1;
+		overflow: hidden;
+		&::before {content: " "; display: table;}
+		&::after {clear: both;}
+	}
+	
+	// font size in REMs and PX
+	// http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+	// 1.125rem equals roughly 18px.  change as needed..
+	@mixin font-size($size: 1.125, $line: $size * 1.4){
+		font-size: ($size * 16) + px;
+		line-height: ($line * 16) + px;
+		font-size: $size + rem;
+		line-height: $line + rem;
+	}
+	
+	// rotation
+	@mixin rotate($val) {
+		-moz-transform: rotate($val);
+		-webkit-transform: rotate($val);
+		-ms-transform: rotate($val);
+		transform: rotate($val);
+		-webkit-transform: translate3d(0px,0px,0px);
+	}
+	
+	// time and duration
+	@mixin time($t: .5s, $ease: ease-out) {
+		-moz-transition: all $t $ease;
+		-webkit-transition: all $t $ease;
+		-ms-transition: all $t $ease;
+		transition: all $t $ease;
+		-webkit-transform: translate3d(0px,0px,0px);
+	}
+	
+	// LinkS[masher]. this just overwrites all other states of links.
+	// probably should use compass for this.
+	@mixin links($property, $value) {
+		&:hover, &:active, &:focus {
+			#{$property}: $value;
+		}
+	}
+	
+	// Width
+	@mixin width($w: 66em, $padding: 5%) {
+		margin: 0 auto;
+		max-width: $w;
+		padding-left: $padding;
+		padding-right: $padding;
+		@extend .clear;
+		
+		@media (max-width: 30em) {
+			padding-left: $padding/2;
+			padding-right: $padding/2;
+			}
+		}

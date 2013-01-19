@@ -1,0 +1,203 @@
+// universals
+
+* {
+	// From http://paulirish.com/2012/box-sizing-border-box-ftw/
+	// also required by SSGS grids
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// IE.  fuck those guys.
+	@include iehide;
+
+// Overall Container Widths.  Done with classes
+	// for my magik class voodoo check this out: http://24ways.org/2012/a-harder-working-class/
+	// specifically this http://codepen.io/joe/pen/Ilhsp
+	[class|="width"],
+	[class*=" width-"],
+	[class*=" width "],
+	[class$=" width"] {
+		@include width;
+	}
+
+	.width-wide {
+		max-width: 75em;
+	}
+
+	.width-narrow {
+		max-width: 55em;
+	}
+
+/* -- helpers - clear */
+	// fron functions
+	.clear {
+		@include clear;
+	}
+
+/* -- helpers - basic grid styles */
+	// Base
+	.grid {
+		.item {
+			@include grid-col;
+		
+			@media (min-width: 30em) {
+			    @include grid-col("one half");
+			}
+			
+			@media (min-width: 50em) {
+			    @include grid-col("one third");
+			}
+		}
+	}
+	
+	// wrapper
+	.grid-wrap {
+		@extend .grid;
+	}
+	
+	.col-main {
+		@include grid-col;
+	
+		@media (min-width: 30em) {
+			@include grid-col("two thirds");
+		}
+	}
+	.col-aside {
+		@include grid-col;
+		
+		@media (min-width: 30em) {
+				@include grid-col("one third");
+		}
+	}
+	
+	.col-col {
+		@include grid-col;
+		
+		@media (min-width: 30em) {
+			@include grid-col("one half");
+		}
+	}
+
+
+
+/* --- helpers - tooltip */
+	// http://codepen.io/SachaG/pen/aLEjI
+	.has-tooltip{
+		position:relative;
+		font-weight: 900;
+		border-bottom: 1px dashed #b2b2b2;
+		margin-bottom: -1px;
+		
+		.tooltip{
+			font-weight: 300;
+			pointer-events: none;
+			position:absolute;
+			z-index:9999;
+			left:50%;
+			top:-40px;
+			opacity:0;
+			//@include single-transition(ease-out, opacity, 300ms, 0ms);
+			@include time();
+			
+			span{
+				display:block;
+				white-space:nowrap;
+				position:relative;
+				background:rgba(0,0,0,0.7);
+				//@include border-radius(3px);
+				border-radius: 6px;
+				padding: .3em .75em;
+				left:-50%;
+				font-size:14px;
+				color:#fff;
+				
+				&:after {
+					top: 100%;
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					border-top-color: rgba(0,0,0,0.7);
+					border-width: 6px;
+					left: 50%;
+					margin-left: -6px;
+				}
+			}
+		}
+		&:hover span{
+			opacity:1;
+		}
+	}
+
+/* --- Tables */
+	table {
+		border-top: 1px solid #ccc;
+		border-left: 1px solid #ccc;
+		width:100%;
+		
+		td, th {
+			padding: .1em .25em;
+			border-right: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+		}
+		th {
+			text-align: left;
+			background: #eee;
+		}
+	}
+
+/* --- Forms */
+// Base styles. grabbed from here: http://www.getskeleton.com/ and modified
+	form {
+		margin-bottom: 1em; }
+	fieldset {
+		margin-bottom: 1em; }
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	textarea,
+	select {
+		border: 1px solid #ccc;
+		padding: 6px 4px;
+		outline: none;
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #777;
+		margin: 0;
+		width: 210px;
+		max-width: 100%;
+		display: block;
+		margin-bottom: 20px;
+		background: #fff; }
+	select {
+		padding: 0; }
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	input[type="email"]:focus,
+	textarea:focus {
+		border: 1px solid #aaa;
+ 		color: #444;
+ 		-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		box-shadow:  0 0 3px rgba(0,0,0,.2); }
+	textarea {
+		min-height: 60px; }
+	label,
+	legend {
+		display: block;
+		font-weight: bold;
+		font-size: 13px;  }
+	select {
+		//width: 220px;
+		}
+	input[type="checkbox"] {
+		display: inline; }
+	label span,
+	legend span {
+		font-weight: normal;
+		font-size: 13px;
+		color: #444; }
