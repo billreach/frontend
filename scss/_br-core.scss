@@ -144,3 +144,38 @@ $txt-inset: #dddddd;
 	background: #eee;
 	border: 1px solid #ccc;
 }
+
+/* Pills */
+.pills {
+	padding: 0;
+	margin: 0;
+	overflow-x: auto;
+	@extend .clear;
+}
+.pill {
+	list-style: none;
+	font-size: 80%;
+	padding: .15em .25em 0 .25em;
+	border-radius: .25em;
+	border: 1px solid #666;
+	background: #aaa;
+	margin: .25em;
+	float: left;
+	white-space: nowrap;
+	
+	a {
+		font-weight: bold;
+		border-left: 1px solid #666;
+		display: inline-block;
+		text-decoration: none;
+		color: #000;
+		padding: .15em .25em .15em .25em;
+		margin: -.15em -.25em 0 .25em;
+		border-radius: 0 .15em .15em 0;
+		
+		&:hover {
+			background: #777;
+			color: #fff;
+		}
+	}
+}

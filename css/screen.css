@@ -337,11 +337,11 @@ textarea { resize: vertical; }
 
 /* -- helpers - clear */
 /* line 34, ../scss/_core.scss */
-.clear, .grid, .grid-wrap, [class|="width"], [class*=" width-"], [class*=" width "], [class$=" width"] { *zoom: 1; overflow: hidden; }
+.clear, .grid, .grid-wrap, [class|="width"], [class*=" width-"], [class*=" width "], [class$=" width"], .pills { *zoom: 1; overflow: hidden; }
 /* line 7, ../scss/_functions.scss */
-.clear::before, .grid::before, .grid-wrap::before, [class|="width"]::before, [class*=" width-"]::before, [class*=" width "]::before, [class$=" width"]::before { content: " "; display: table; }
+.clear::before, .grid::before, .grid-wrap::before, [class|="width"]::before, [class*=" width-"]::before, [class*=" width "]::before, [class$=" width"]::before, .pills::before { content: " "; display: table; }
 /* line 8, ../scss/_functions.scss */
-.clear::after, .grid::after, .grid-wrap::after, [class|="width"]::after, [class*=" width-"]::after, [class*=" width "]::after, [class$=" width"]::after { clear: both; }
+.clear::after, .grid::after, .grid-wrap::after, [class|="width"]::after, [class*=" width-"]::after, [class*=" width "]::after, [class$=" width"]::after, .pills::after { clear: both; }
 
 /* -- helpers - basic grid styles */
 /* line 41, ../scss/_core.scss */
@@ -488,3 +488,14 @@ input[type="submit"]:hover, button:hover { -webkit-transform: translate(0px, -1p
 /* Task table */
 /* line 141, ../scss/_br-core.scss */
 .detail-veiw { padding: 1em; border-radius: 4px; background: #eee; border: 1px solid #cccccc; }
+
+/* Pills */
+/* line 149, ../scss/_br-core.scss */
+.pills { padding: 0; margin: 0; overflow-x: auto; }
+
+/* line 155, ../scss/_br-core.scss */
+.pill { list-style: none; font-size: 80%; padding: 0.15em 0.25em 0 0.25em; border-radius: .25em; border: 1px solid #666666; background: #aaa; margin: .25em; float: left; white-space: nowrap; }
+/* line 166, ../scss/_br-core.scss */
+.pill a { font-weight: bold; border-left: 1px solid #666666; display: inline-block; text-decoration: none; color: #000; padding: 0.15em 0.25em 0.15em 0.25em; margin: -0.15em -0.25em 0 0.25em; border-radius: 0 0.15em 0.15em 0; }
+/* line 176, ../scss/_br-core.scss */
+.pill a:hover { background: #777; color: #fff; }
