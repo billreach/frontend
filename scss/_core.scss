@@ -8,7 +8,7 @@
 	box-sizing: border-box;
 }
 
-// IE.  fuck those guys.
+// fuck those guys.
 	@include iehide;
 
 // Overall Container Widths.  Done with classes
@@ -55,16 +55,20 @@
 	.grid-wrap {
 		@extend .grid;
 	}
-	
+	.m-top {
+		& > *:first-child {margin-top: 0;}
+	}
 	.col-main {
 		@include grid-col;
-	
+		@extend .m-top;
+		
 		@media (min-width: 30em) {
 			@include grid-col("two thirds");
 		}
 	}
 	.col-aside {
 		@include grid-col;
+		@extend .m-top;
 		
 		@media (min-width: 30em) {
 				@include grid-col("one third");
@@ -73,6 +77,7 @@
 	
 	.col-col {
 		@include grid-col;
+		@extend .m-top;
 		
 		@media (min-width: 30em) {
 			@include grid-col("one half");
@@ -201,3 +206,19 @@
 		font-weight: normal;
 		font-size: 13px;
 		color: #444; }
+	
+	// Buttons
+	input[type="submit"],
+	button {
+		border-radius: 4px;
+		border:1px solid #333;
+		margin: 1px;
+		@include background-image(linear-gradient(white, #eeeeee, #dddddd));
+		@include box-shadow(rgba(black, 0.4) 0 1px 2px, white 0 1px 0px inset);
+		@include time(.1s);
+		
+		&:hover {
+			@include translate(0px, -1px);
+			@include box-shadow(rgba(black, 0.4) 0 2px 3px, white 0 1px 0px inset);
+		}
+	}

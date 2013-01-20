@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".company-current").find(".menu").click(function(){$(".company-selector").slideToggle()});$(".compound-list > li").click(function(){$(".compound-list > li").removeClass("active");$(this).addClass("active");$(".compound-list > li:not(.active)").find(".sub-list").slideUp();$(this).find(".sub-list").slideDown()})});

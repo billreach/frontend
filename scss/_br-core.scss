@@ -1,2 +1,146 @@
 /* Core Billreach styles. */
 
+// Colors
+$bg-inset: #666666;
+$txt-inset: #dddddd;
+
+/* Header */
+// Not doing anything for sticky head for now.
+	#header {
+		@include background-image(linear-gradient($bg-inset, darken($bg-inset, 10%)));
+		@include box-shadow;
+		
+		a {
+			text-decoration: none;
+			color: #fff;
+			@include text-shadow;
+		} 
+	}
+	.logo,
+	.nav-main,
+	.nav-main a,
+	.nav-controls a {
+		float: left;
+		display: block;
+	}
+	.nav-controls {
+		float: right;
+		display: block;
+	}
+	.logo,
+	.nav-main a,
+	.nav-controls a {
+		padding: 1em;
+	}
+	
+	// active/hover 
+	.nav-main a,
+	.nav-controls a {
+		@include time(.1s);
+		&:hover {
+			background: rgba(black, .1);
+		}
+		&.active {
+			background: rgba(black, .25) !important;
+		}
+	}
+
+/* Comapny Menu */
+	.company-current {padding: 1.5em 0;}
+	.company-selector {
+		background: $bg-inset;
+		color: $txt-inset;
+		@extend .jshide;
+		overflow: hidden;
+		margin-bottom: 1.5em;
+	
+		.col-aside {
+			}
+	}
+	
+	.company-list {
+		margin: 0 0 -100em 0;
+		padding: 0 0 100em 0;
+		border-left: 1px solid darken($bg-inset, 20%);
+		border-right: 1px solid darken($bg-inset, 20%);
+		background: darken($bg-inset, 10%);
+		
+		
+		& > li {
+			margin: 0 -1px 0 0;
+			padding: 1em .5em;
+			display: block;
+			list-style: none;
+			border-bottom: 1px solid darken($bg-inset, 20%);
+			border-right: 1px solid darken($bg-inset, 20%);
+			cursor: pointer;
+			@include time(.15s);
+			
+			&:hover {
+				background: darken($bg-inset, 5%);
+			}
+			&.active {
+				color: #fff;
+				background: $bg-inset;
+				border-right-color: $bg-inset;
+			}
+		}
+	}
+	
+	.company-meta {
+		padding-top: 2em;
+		padding-bottom: 2em;
+	}
+
+
+
+/* --- UI elements */
+/* Compound List */
+.compound-list {
+	border-radius: 3px;
+	border:1px solid #ccc;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	
+	li {
+		list-style: none;
+		
+		// fancy CSS judo to fix top/bottom rounded corners
+		&:first-child .list-name {border-radius: 2px 2px 0 0;}
+		&:last-child .list-name {border-radius: 0 0 2px 2px;}
+		
+		&.active {
+			&:last-child .list-name {border-radius: 0;}
+			&:last-child .sub-list {border-radius: 0 0 2px 2px;}
+		}
+		
+	}
+	
+	.list-name {
+		display: block;
+		padding: .5em;
+		@include background-image(linear-gradient(white, #eeeeee, #dddddd));
+		@include box-shadow(white 0 1px 0px inset);
+	}
+	
+	.sub-list {
+		margin: 0;
+		padding: 0;
+		background: $bg-inset;
+		color: $txt-inset;
+		@extend .jshide;
+	}
+	
+	.sub-name {
+		font-weight: normal;
+	}
+}
+
+/* Task table */
+.detail-veiw {
+	padding:1em;
+	border-radius: 4px;
+	background: #eee;
+	border: 1px solid #ccc;
+}

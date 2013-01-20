@@ -6,7 +6,13 @@
 	@import "normalize";
 
 // Compass
-
+	// Set compass variables
+	@import "vars";
+	
+	// include the compass libraries
+	@import "compass/css3";
+	
+	
 /* Core framework stuff */
 	@import "functions";
 	@import "fonts";
