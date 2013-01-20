@@ -41,7 +41,8 @@
 		max-width: $w;
 		padding-left: $padding;
 		padding-right: $padding;
-		@extend .clear;
+		//@extend .clear;
+		clear: both;
 		
 		@media (max-width: 30em) {
 			padding-left: $padding/2;

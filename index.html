@@ -27,16 +27,164 @@
 					<a href="/" class="logo">
 						Billreach
 					</a>
-					<nav class="nav-main">
-						<a href="#projects" class="active">Projects</a>
-						<a href="#billing">Billing</a>
-						<a href="#connections">Connections &amp; Users</a>
-					</nav>
-					<div class="nav-controls">
-						<a href="#timer">Timer</a>
-						<a href="#alerts">Billing</a>
-						<a href="#user"><img src="#" class="profile-photo"> Malcolm Reynolds</a>
-					</div>
+					<ul class="nav-main">
+						<li class="active"><a href="#projects">Projects</a></li>
+						<li><a href="#billing">Billing</a></li>
+						<li><a href="#connections">Connections &amp; Users</a></li>
+					</ul>
+					<ul class="nav-controls">
+						<li class=""> <!-- sometimes gets class=recording -->
+							<a href="#timer" class="timer-toggle">Timer &#9662;</a>
+							<div class="timer-dropdown dropdown">
+								
+								<!-- the currently selected timer -->
+								<div class="timer-selected ">
+									
+									<!-- the counter -->
+									<div class="timer-controls">
+										<span class="timer-time">
+											<span class="hours">
+												--
+											</span>
+											:
+											<span class="minutes">
+												--
+											</span>
+										</span>
+										<span class="control play">&#9654;</span>
+										<span class="control active stop">&#9632;</span>
+									</div>
+									
+									<!-- meta list -->
+									<div class="timer-meta">
+										<div class="time-for">
+											<dt class="">Time for:</dt>
+											<dd class="">
+												<strong class="time-for-project">NewMeidaMill</strong>
+												<span class="time-for-task">Seasonal Changes</span>
+											</dd>
+										</div>
+										<div class="last-timed">
+											<dt>Last timed:</dt>
+											<dd>
+												<!-- multiple spans so JS would be simpler.  not sure if this is the best way -->
+												<span class="timed-when">Jan 20</span>
+												for
+												<span class="timed-length-h">1h</span>
+												<span class="timed-length-m">15m</span>
+												at
+												<span class="timed-time">8:37am</span>
+											</dd>
+										</div>
+									</div>
+								</div>
+								
+								<!-- select the companies and stuff -->
+								<div class="timer-select">
+									<div class="recents">
+									
+										<h5>Recently Timed:</h5>
+										<ul class="populate-list">
+											<li title="NewMeidaMill &rsaquo; Seasonal Changes sdlkfjsdkl lkdsfj lksd skdljfskld">
+												<strong class="project">NewMeidaMill</strong>
+												<span class="task">Seasonal Changes sdlkfjsdkl lkdsfj lksd skdljfskld</span>
+											</li>
+											<li title="NewMeidaMill &rsaquo; Seasonal Changes">
+												<strong class="project">NewMeidaMill</strong>
+												<span class="task">Seasonal Changes</span>
+											</li>
+											<li title="NewMeidaMill &rsaquo; Seasonal Changes">
+												<strong class="project">NewMeidaMill</strong>
+												<span class="task">Seasonal Changes</span>
+											</li>
+											<li title="NewMeidaMill &rsaquo; Seasonal Changes">
+												<strong class="project">NewMeidaMill</strong>
+												<span class="task">Seasonal Changes</span>
+											</li>
+											<li title="NewMeidaMill &rsaquo; Seasonal Changes">
+												<strong class="project">NewMeidaMill</strong>
+												<span class="task">Seasonal Changes</span>
+											</li>
+										</ul>
+										
+									</div>
+									<div class="panel">
+										<a href="#">Change Company</a>
+										<!-- uh.  not 100% sure of the interaction here yet.  we'll sort it later :p -->
+										
+										<h5>Company Name</h5>
+										
+										<ul class="mini-list">
+											<li class="active">
+												<span class="list-name">Client Name</span>
+												<a href="#client-page" class="info">></a>
+												<ul class="sub-list">
+													<li title="project name">
+														<strong class="sub-name">
+															<!-- eventually I'd love to be able to save 'unaffiliated' time on a per project or client basis.  but for now... uh probably not. -->
+															Project Name
+														</strong>
+														<a href="#project-page" class="info">></a>
+														<ul class="sub-list populate-list">
+															<li title="task name">
+																<!-- clicking the task name dumps it into the left panel and closes this -->
+																Task Name
+																<a href="#task-page" class="info">></a>
+															</li>
+															<li title="task name">
+																Task Name
+																<a href="#task-page" class="info">></a>
+															</li>
+															<li title="task name">
+																Task Name
+																<a href="#task-page" class="info">></a>
+															</li>
+															<li title="task name">
+																Task Name
+																<a href="#task-page" class="info">></a>
+															</li>
+														</ul>
+													</li>
+													<li title="project name">
+														<strong class="sub-name">Project Name</strong>
+														<a href="#project-page" class="info">></a>
+													</li>
+													<li title="project name">
+														<strong class="sub-name">Project Name</strong>
+														<a href="#project-page" class="info">></a>
+													</li>
+												</ul>
+											</li>
+											<li title="client name">
+												<span class="list-name">Client Name</span>
+												<a href="#client-page" class="info">></a>
+											</li>
+											<li title="client name">
+												<span class="list-name">Client Name</span>
+												<a href="#client-page" class="info">></a>
+											</li>
+											<li title="client name">
+												<span class="list-name">Client Name</span>
+												<a href="#client-page" class="info">></a>
+											</li>
+											<li title="client name">
+												<span class="list-name">Client Name</span>
+												<a href="#client-page" class="info">></a>
+											</li>
+											<li title="client name">
+												<span class="list-name">Client Name</span>
+												<a href="#client-page" class="info">></a>
+											</li>
+										</ul>
+
+									</div>
+								</div>
+							
+							</div>
+						</li>
+						<li><a href="#alerts">Alerts &#9662;</a></li>
+						<li><a href="#user"><img src="#" class="profile-photo"> Malcolm Reynolds &#9662;</a></li>
+					</ul>
 				</div>
 			</div>
 		</header>
@@ -220,9 +368,15 @@
 								</ul>
 								<h3>Time:</h3>
 								<ul class="pills">
-									<li class="pill">4h 13m on Jan 13 at 8:37am <a href="#">X</a></li>
-									<li class="pill">4h 13m on Jan 13 at 8:37am <a href="#">X</a></li>
-									<li class="pill">4h 13m on Jan 13 at 8:37am <a href="#">X</a></li>
+									<li class="pill">
+										<span class="timed-when">Jan, 20</span>
+										for
+										<span class="timed-length-h">1h</span>
+										<span class="timed-length-m">15m</span>
+										at
+										<span class="timed-time">8:37am</span>
+										<a href="#">X</a>
+									</li>
 								</ul>
 								And 4 hours from <span class="user-simon-tam">Simon Tam</span>
 								<hr>

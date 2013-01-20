@@ -5,10 +5,16 @@ $bg-inset: #666666;
 $txt-inset: #dddddd;
 
 /* Header */
-// Not doing anything for sticky head for now.
+	body {padding-top: 2em;}
+	
 	#header {
 		@include background-image(linear-gradient($bg-inset, darken($bg-inset, 10%)));
 		@include box-shadow;
+		position: fixed;
+		top:0;
+		width: 100%;
+		left:0;
+		z-index: 100;
 		
 		a {
 			text-decoration: none;
@@ -18,32 +24,45 @@ $txt-inset: #dddddd;
 	}
 	.logo,
 	.nav-main,
-	.nav-main a,
-	.nav-controls a {
-		float: left;
-		display: block;
+	.nav-main > li,
+	.nav-controls > li {
+		display: inline-block;
+	}
+	.nav-main,
+	.nav-controls {
+		margin: 0;
+		padding: 0;
+		position: relative;
+
+		
+		& > li {
+			padding: .25em 0;
+			
+			& > a {
+				@include time(.1s);
+				padding: .25em .5em;
+				display: inline-block;
+				border-radius: 2em;
+			
+				&:hover {
+					background: rgba(black, .1);
+				}
+			}
+		
+			&.active > a {
+				background: rgba(black, .25) !important;
+			}
+		}
 	}
 	.nav-controls {
 		float: right;
 		display: block;
 	}
-	.logo,
-	.nav-main a,
-	.nav-controls a {
-		padding: 1em;
+	.logo {
+		padding: .5em 0;
+		padding-right: 1em;
 	}
 	
-	// active/hover 
-	.nav-main a,
-	.nav-controls a {
-		@include time(.1s);
-		&:hover {
-			background: rgba(black, .1);
-		}
-		&.active {
-			background: rgba(black, .25) !important;
-		}
-	}
 
 /* Comapny Menu */
 	.company-current {padding: 1.5em 0;}
@@ -179,3 +198,131 @@ $txt-inset: #dddddd;
 		}
 	}
 }
+
+
+/* Timer */
+	// Container
+	.timer-dropdown {
+		position: absolute;
+		top:2.5em;
+		right: 0;
+		width: 600px;
+		border:5px transparent solid;
+		border-radius:5px;
+		background: rgba(#333, .95);
+		@extend .jshide;
+		
+		@include box-shadow(rgba(black, .5) 0px 2px 6px);
+		
+		.timer-selected {
+			background: #fff;
+			@include box-shadow(black 0px 1px 1px);
+			position: relative;
+			z-index: 20;
+		}
+		
+		.timer-selected,
+		.timer-select {
+			width: 50%;
+			float: left;
+			height: 250px;
+			overflow: auto;
+		}
+		
+		.panel {
+			
+			@include translate(0px, 0px);
+			
+			position: absolute;
+			top:0;
+			bottom:0;
+			left:0;
+			width: 50%;
+			overflow: auto;
+			@include time(.1s);
+			background: #ccc;
+			z-index: 10;
+			//@extend .jshide;
+		}
+		.panel.open {
+			@include translate(100%, 0);
+		}
+		
+		.recents {
+			color: #fff;
+			z-index: 5;
+		}
+		.recents {
+			position: absolute;
+			top:0;
+			bottom:0;
+			left:50%;
+			width: 50%;
+			overflow: auto;
+			
+			ul {padding: 0;margin: 0;}
+		}
+		
+		.panel,
+		.recents,
+		.timer-meta {
+			padding: 1em;
+		}
+		
+		li,
+		dd {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			margin: 0;
+			}
+		
+		
+		// Timer blocks
+		.time-for,
+		.last-timed {
+			padding: .5em;
+			margin: 0 -.5em .5em -.5em;
+			border: 1px solid #fff;
+			
+		}
+		.time-for {
+			@include time(.15s);
+			border-radius: 2px;
+			cursor: pointer;
+			border-color: #eee;
+			
+			&:hover {
+				@include box-shadow(#ccc 0px 1px 2px);
+				border-color: #aaa;
+			}
+		}
+		
+		.timer-controls {
+			background: #eee;
+			padding: .5em;
+			text-align: right;
+			
+			.control,
+			.timer-time {
+				display: inline-block;
+			}
+			.timer-time {
+				float: left;
+			}
+		}
+	}
+	
+	// populate list 
+	.populate-list {
+		padding: 0;
+		
+		li {list-style-type: none;
+			cursor: pointer;
+			
+			&:before {
+				content: '\2039\00a0\00a0';
+			}
+		}
+		
+	}
