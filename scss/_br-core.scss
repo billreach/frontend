@@ -243,6 +243,8 @@ $txt-inset: #dddddd;
 			background: #ccc;
 			z-index: 10;
 			//@extend .jshide;
+			
+			ul {padding: 0;margin: 0;}
 		}
 		.panel.open {
 			@include translate(100%, 0);

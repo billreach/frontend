@@ -517,33 +517,35 @@ body { padding-top: 2em; }
 /* line 232, ../scss/_br-core.scss */
 .timer-dropdown .panel { -webkit-transform: translate(0px, 0px); -moz-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); -o-transform: translate(0px, 0px); transform: translate(0px, 0px); position: absolute; top: 0; bottom: 0; left: 0; width: 50%; overflow: auto; -moz-transition: all 0.1s ease-out; -webkit-transition: all 0.1s ease-out; -ms-transition: all 0.1s ease-out; transition: all 0.1s ease-out; -webkit-transform: translate3d(0px, 0px, 0px); background: #ccc; z-index: 10; }
 /* line 247, ../scss/_br-core.scss */
+.timer-dropdown .panel ul { padding: 0; margin: 0; }
+/* line 249, ../scss/_br-core.scss */
 .timer-dropdown .panel.open { -webkit-transform: translate(100%, 0); -moz-transform: translate(100%, 0); -ms-transform: translate(100%, 0); -o-transform: translate(100%, 0); transform: translate(100%, 0); }
-/* line 251, ../scss/_br-core.scss */
+/* line 253, ../scss/_br-core.scss */
 .timer-dropdown .recents { color: #fff; z-index: 5; }
-/* line 255, ../scss/_br-core.scss */
+/* line 257, ../scss/_br-core.scss */
 .timer-dropdown .recents { position: absolute; top: 0; bottom: 0; left: 50%; width: 50%; overflow: auto; }
-/* line 263, ../scss/_br-core.scss */
+/* line 265, ../scss/_br-core.scss */
 .timer-dropdown .recents ul { padding: 0; margin: 0; }
-/* line 268, ../scss/_br-core.scss */
+/* line 270, ../scss/_br-core.scss */
 .timer-dropdown .panel, .timer-dropdown .recents, .timer-dropdown .timer-meta { padding: 1em; }
-/* line 273, ../scss/_br-core.scss */
+/* line 275, ../scss/_br-core.scss */
 .timer-dropdown li, .timer-dropdown dd { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0; }
-/* line 283, ../scss/_br-core.scss */
+/* line 285, ../scss/_br-core.scss */
 .timer-dropdown .time-for, .timer-dropdown .last-timed { padding: .5em; margin: 0 -0.5em 0.5em -0.5em; border: 1px solid white; }
-/* line 289, ../scss/_br-core.scss */
+/* line 291, ../scss/_br-core.scss */
 .timer-dropdown .time-for { -moz-transition: all 0.15s ease-out; -webkit-transition: all 0.15s ease-out; -ms-transition: all 0.15s ease-out; transition: all 0.15s ease-out; -webkit-transform: translate3d(0px, 0px, 0px); border-radius: 2px; cursor: pointer; border-color: #eee; }
-/* line 295, ../scss/_br-core.scss */
+/* line 297, ../scss/_br-core.scss */
 .timer-dropdown .time-for:hover { -webkit-box-shadow: #cccccc 0px 1px 2px; -moz-box-shadow: #cccccc 0px 1px 2px; box-shadow: #cccccc 0px 1px 2px; border-color: #aaa; }
-/* line 301, ../scss/_br-core.scss */
+/* line 303, ../scss/_br-core.scss */
 .timer-dropdown .timer-controls { background: #eee; padding: .5em; text-align: right; }
-/* line 307, ../scss/_br-core.scss */
+/* line 309, ../scss/_br-core.scss */
 .timer-dropdown .timer-controls .control, .timer-dropdown .timer-controls .timer-time { display: inline-block; }
-/* line 310, ../scss/_br-core.scss */
+/* line 312, ../scss/_br-core.scss */
 .timer-dropdown .timer-controls .timer-time { float: left; }
 
-/* line 317, ../scss/_br-core.scss */
+/* line 319, ../scss/_br-core.scss */
 .populate-list { padding: 0; }
-/* line 320, ../scss/_br-core.scss */
+/* line 322, ../scss/_br-core.scss */
 .populate-list li { list-style-type: none; cursor: pointer; }
-/* line 323, ../scss/_br-core.scss */
+/* line 325, ../scss/_br-core.scss */
 .populate-list li:before { content: '\2039\00a0\00a0'; }
