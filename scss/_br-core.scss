@@ -120,7 +120,7 @@ $txt-inset: #dddddd;
 	.list-name {
 		display: block;
 		padding: .5em;
-		@include background-image(linear-gradient(white, #eeeeee, #dddddd));
+		@include background-image(linear-gradient(#eeeeee, #dddddd));
 		@include box-shadow(white 0 1px 0px inset);
 	}
 	
