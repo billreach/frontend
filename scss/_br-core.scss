@@ -62,10 +62,16 @@ $txt-inset: #dddddd;
 		padding: .5em 0;
 		padding-right: 1em;
 	}
-	
+
+/* Helpers */
+.clip {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
 
 /* Comapny Menu */
-	.company-current {padding: 0 0 1.5em 0;}
+	.company-current {padding: 0 0 1.5em 0; cursor: pointer;}
 	.company-selector {
 		background: $bg-inset;
 		color: $txt-inset;
@@ -357,3 +363,4 @@ $txt-inset: #dddddd;
 		}
 		
 	}
+	

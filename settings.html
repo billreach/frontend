@@ -28,8 +28,8 @@
 						Billreach
 					</a>
 					<ul class="nav-main">
-						<li class="active"><a href="#projects">Projects</a></li>
-						<li><a href="#billing">Billing</a></li>
+						<li><a href="tasks.html">Projects</a></li>
+						<li><a href="billing.html">Billing</a></li>
 						<!-- <li><a href="#connections">Connections &amp; Users</a></li> -->
 					</ul>
 					<ul class="nav-controls">
@@ -183,7 +183,7 @@
 							</div>
 						</li>
 						<li><a href="#alerts">Alerts &#9662;</a></li>
-						<li><a href="#user"><!-- <img src="#" class="profile-photo"> --> Malcolm Reynolds &#9662;</a></li>
+						<li class="active"><a href="settings.html"><!-- <img src="#" class="profile-photo"> --> Malcolm Reynolds &#9662;</a></li>
 					</ul>
 				</div>
 			</div>
@@ -193,9 +193,8 @@
 			<div class="grid-wrap">
 				<div class="col-aside">
 					<ul class="nav-list">
-						<li class="active"><span class="list-name">User info</span></li>
-						<li><span class="list-name">Account Info</span></li>
-						<li><span class="list-name">Companies</span></li>
+						<li class="active"><a class="list-name" href="settings.html">User info</a></li>
+						<li><a class="list-name" href="settings2.html">Companies</a></li>
 					</ul>
 				</div>
 				<div class="col-main">
@@ -207,7 +206,7 @@
 						<fieldset>
 							<legend>My Info</legend>
 							<div class="f-block">
-								<label>Login/Password:</label>
+								<label>Login/Password</label>
 								<input placeholder="">
 								<span>A confirmation email will be sent.</span>
 							</div>
@@ -217,8 +216,8 @@
 								<input placeholder="Last Name">
 							</div>
 							<div class="f-block">
-								<label>Default Hourly Rate:</label>
-								$<input placeholder="">.<sup>00</sup>
+								<label>Default Rate</label>
+								$<input type="number" placeholder="100">.<sup>00</sup> per hour
 							</div>
 							<div class="f-block">
 								<label>Password</label>

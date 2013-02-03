@@ -29,7 +29,7 @@
 					</a>
 					<ul class="nav-main">
 						<li><a href="tasks.html">Projects</a></li>
-						<li class="active"><a href="billing.html">Billing</a></li>
+						<li><a href="billing.html">Billing</a></li>
 						<!-- <li><a href="#connections">Connections &amp; Users</a></li> -->
 					</ul>
 					<ul class="nav-controls">
@@ -183,87 +183,60 @@
 							</div>
 						</li>
 						<li><a href="#alerts">Alerts &#9662;</a></li>
-						<li><a href="settings.html"><!-- <img src="#" class="profile-photo"> --> Malcolm Reynolds &#9662;</a></li>
+						<li class="active"><a href="settings.html"><!-- <img src="#" class="profile-photo"> --> Malcolm Reynolds &#9662;</a></li>
 					</ul>
 				</div>
 			</div>
 		</header>
 
-		<div class="nav-company">
-			<div class="company-current">
-				<div class="width">
-					<button class="menu company-menu">Consulting company</button>
-				</div>
-			</div>
-			<div class="company-selector">
-				<div class="width">
-					<div class="grid-wrap">
-						<div class="col-aside">
-							<ul class="company-list">
-								<li class="active">Consulting company</li>
-								<li>Consulting company</li>
-								<li>Consulting company</li>
-							</ul>
-						</div>
-						<div class="col-main company-meta">
-							<h2>Company Name</h2>
-							<ul class="info-blocks">
-								<li>
-									<strong class="info-definition">Primary Contact:</strong>
-									<span class="info-content">Badger</span>
-								</li>
-								<li>
-									<strong class="info-definition">Billing Address:</strong>
-									<span class="info-content">
-										123 Fake St<br />
-										Seattle, WA
-									</span>
-								</li>
-								<li>
-									<strong class="info-definition">Billing Rate:</strong>
-									<span class="info-content">$100/ Hour</span>
-								</li>
-							</ul>
-							<button>Edit</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<div class="width">
-				
+			<div class="grid-wrap">
+				<div class="col-aside">
+					<ul class="nav-list">
+						<li><a class="list-name" href="settings.html">User info</a></li>
+						<li class="active"><a class="list-name" href="settings2.html">Companies</a></li>
+					</ul>
+				</div>
+				<div class="col-main">
 					
-					<h1>Invoices for <span class="company-current">Company Name</span></h1>
+					<h1>Companies</h1>
 					<hr />
-					
-						<!-- I'll probably want to push this one level deeper past a top-level dashboard. -->
-					
-						<table cellpadding="0" border="0" cellspacing="0">
+
+					<table cellpadding="0" border="0" cellspacing="0">
 								<thead>
 									<tr>
-										<th></th>
-										<th>Invoice Number</th>
-										<th>Sent on</th>
-										<th>Amount</th>
-										<th>Status</th>
+										<th>Company Name</th>
+										<th>Active Projects</th>
+										<th>Hourly Rate</th>
 										<th></th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td><input type="checkbox"></td>
-										<td>001</td>
-										<td>Jan 31 2013</td>
-										<td>$1,000</td>
-										<td>Paid</td>
-										<td><a href="invoice.html">Details</a></td>
+										<td>Company Name</td>
+										<td class="clip">Project Name, Project Name</td>
+										<td>$100/hr</td>
+										<td><a href="company-details.html">Edit/Details</a></td>
+									</tr>
+									<tr>
+										<td>Company Name</td>
+										<td class="clip">Project Name, Project Name</td>
+										<td>$100/hr</td>
+										<td><a href="company-details.html">Edit/Details</a></td>
+									</tr>
+									<tr>
+										<td>Company Name</td>
+										<td class="clip">Project Name, Project Name</td>
+										<td>$100/hr</td>
+										<td><a href="company-details.html">Edit/Details</a></td>
 									</tr>
 									
 								</tbody>
 							</table>
-						<hr>
-					
+
+					<hr>
+					<button>Add Company</button>
+				</div>
 			</div>
 		</div>
 

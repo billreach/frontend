@@ -3,11 +3,12 @@ $(document).ready(function() {
 /*
  * Company Select
  */
-	$('.company-current').find('.menu').click(function(){
+	$('.company-current').click(function(){
 		
 		// TODO.  change this to CSS transformy thing with class swap.
 		$('.company-selector').slideToggle('fast');
 	});
+	
 	
 /* Compound list */
 	$('.compound-list > li').click(function(){

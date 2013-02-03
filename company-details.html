@@ -29,7 +29,7 @@
 					</a>
 					<ul class="nav-main">
 						<li><a href="tasks.html">Projects</a></li>
-						<li class="active"><a href="billing.html">Billing</a></li>
+						<li><a href="billing.html">Billing</a></li>
 						<!-- <li><a href="#connections">Connections &amp; Users</a></li> -->
 					</ul>
 					<ul class="nav-controls">
@@ -183,87 +183,97 @@
 							</div>
 						</li>
 						<li><a href="#alerts">Alerts &#9662;</a></li>
-						<li><a href="settings.html"><!-- <img src="#" class="profile-photo"> --> Malcolm Reynolds &#9662;</a></li>
+						<li class="active"><a href="settings.html"><!-- <img src="#" class="profile-photo"> --> Malcolm Reynolds &#9662;</a></li>
 					</ul>
 				</div>
 			</div>
 		</header>
 
-		<div class="nav-company">
-			<div class="company-current">
-				<div class="width">
-					<button class="menu company-menu">Consulting company</button>
-				</div>
-			</div>
-			<div class="company-selector">
-				<div class="width">
-					<div class="grid-wrap">
-						<div class="col-aside">
-							<ul class="company-list">
-								<li class="active">Consulting company</li>
-								<li>Consulting company</li>
-								<li>Consulting company</li>
-							</ul>
-						</div>
-						<div class="col-main company-meta">
-							<h2>Company Name</h2>
-							<ul class="info-blocks">
-								<li>
-									<strong class="info-definition">Primary Contact:</strong>
-									<span class="info-content">Badger</span>
-								</li>
-								<li>
-									<strong class="info-definition">Billing Address:</strong>
-									<span class="info-content">
-										123 Fake St<br />
-										Seattle, WA
-									</span>
-								</li>
-								<li>
-									<strong class="info-definition">Billing Rate:</strong>
-									<span class="info-content">$100/ Hour</span>
-								</li>
-							</ul>
-							<button>Edit</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<div class="width">
-				
+			<div class="grid-wrap">
+				<div class="col-aside">
+					<ul class="nav-list">
+						<li><a class="list-name" href="settings.html">User info</a></li>
+						<li class="active"><a class="list-name" href="settings2.html">Companies</a></li>
+					</ul>
+				</div>
+				<div class="col-main">
 					
-					<h1>Invoices for <span class="company-current">Company Name</span></h1>
+					<h1>Company Name</h1>
 					<hr />
 					
-						<!-- I'll probably want to push this one level deeper past a top-level dashboard. -->
+					<!-- once we let comapnies make acconts in here,
+					     a lot of this can be set my the company, and
+					     trickle down to the user. so we'd -eventually-
+					     need some kind of company invite/request invite
+					     system. 
+					-->
 					
-						<table cellpadding="0" border="0" cellspacing="0">
-								<thead>
-									<tr>
-										<th></th>
-										<th>Invoice Number</th>
-										<th>Sent on</th>
-										<th>Amount</th>
-										<th>Status</th>
-										<th></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>001</td>
-										<td>Jan 31 2013</td>
-										<td>$1,000</td>
-										<td>Paid</td>
-										<td><a href="invoice.html">Details</a></td>
-									</tr>
-									
-								</tbody>
-							</table>
-						<hr>
-					
+					<form>
+						<fieldset>
+							<legend>Company Info</legend>
+							<div class="f-block">
+								<label>Company Name</label>
+								<input placeholder="">
+							</div>
+							<div class="f-block">
+								<label>Address</label>
+								<input placeholder="Street 1"><br />
+								<input placeholder="Street 2"><br />
+								<select>
+									<option>State</option>
+								</select><br />
+								<select>
+									<option>Country</option>
+								</select>
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend>Primary Contact</legend>
+							<div class="f-block">
+								<label> Name</label>
+								<input placeholder="">
+							</div>
+							<div class="f-block">
+								<label>Email</label>
+								<input placeholder="" type="email">
+							</div>
+							<div class="f-block">
+								<label>Phone Number</label>
+								<input placeholder="">
+							</div>
+						</fieldset>
+						<fieldset>
+							<legend>Billing info</legend>
+							<div class="f-block">
+								<label>Rate</label>
+								$<input type="number" placeholder="100">.<sup>00</sup> per hour
+								<span>If left blank, <strong>Company Name</strong> will use your default rate of <strong>$100/hr</strong>.</span>
+							</div>
+							<div class="f-block">
+								<label>Billing Period</label>
+								<select>
+									<option>Monthly (end of month)</option>
+									<option>Twice a month (15th and end of month)</option>
+									<option>Weekly</option>
+								</select>
+							</div>
+						</fieldset>
+						<div>
+							<h2>History</h2>
+							<ul>
+								<li><a href="">4 posted invoices</a> <strong>1 Unpaid</strong></li>
+								<li><a href="">2 active projects</a></li>
+								<li><a href="">3 completed projects</a></li>
+							</ul>
+							<br />
+							
+						</div>
+					</form>
+
+					<hr>
+					<button class="primary">Save</button>
+				</div>
 			</div>
 		</div>
 
