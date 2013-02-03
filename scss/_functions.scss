@@ -50,6 +50,16 @@
 			}
 		}
 	
+	// btngrad 
+	// Good for creating 4 step gradients.
+	@mixin btngrad($c1, $c2, $c3, $c4) {
+		background-color: $c2;
+		background-image: -webkit-linear-gradient(top, $c1 0%, $c2 25%, $c3 75%, $c4 100%);
+		background-image: -moz-linear-gradient(top, $c1 0%, $c2 25%, $c3 75%, $c4 100%);
+		background-image: -ms-linear-gradient(top, $c1 0%, $c2 25%, $c3 75%, $c4 100%);
+		background-image: linear-gradient(top, $c1 0%, $c2 25%, $c3 75%, $c4 100%);
+	}
+	
 	// Hide so JS can do its thing
 	// Pull this in with @extend .jshide;
 	.jshide {display: none;}

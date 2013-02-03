@@ -195,97 +195,43 @@
 					<ul class="nav-list">
 						<li class="active"><span class="list-name">User info</span></li>
 						<li><span class="list-name">Account Info</span></li>
+						<li><span class="list-name">Companies</span></li>
 					</ul>
 				</div>
 				<div class="col-main">
 					
-					<h1>Project Name</h1>
-					<p>Assigned to: <span class="user-malcolm-reynolds">You</span>, <span class="user-simon-tam">Simon Tam</span></p>
+					<h1>User Info</h1>
 					<hr />
-					<div class="grid-wrap">
-						<div class="col-col">
-							<table cellpadding="0" border="0" cellspacing="0">
-								<thead>
-									<tr>
-										<th></th>
-										<th>Task</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="active">
-										<td><input type="checkbox"></td>
-										<td>Task Name</td>
-										<td>
-											<span class="u-mini user-malcolm-reynolds">You</span>
-											<span class="u-mini user-simon-tam">Simon Tam</span>
-											<span class="status-progress">In Progress</span>
-										</td>
-									</tr>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>Task Name</td>
-										<td>
-											<span class="u-mini user-malcolm-reynolds">You</span>
-											<span class="u-mini user-simon-tam">Simon Tam</span>
-											<span class="status-progress">In Progress</span>
-										</td>
-									</tr>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>Task Name</td>
-										<td>
-											<span class="u-mini user-malcolm-reynolds">You</span>
-											<span class="u-mini user-simon-tam">Simon Tam</span>
-											<span class="status-progress">In Progress</span>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div> <!-- col col -->
-						<div class="col-col">
-							<div class="detail-veiw">
-								
-								<h2>Task Name</h2>
-								<ul class="info-blocks">
-									<li>
-										<strong class="info-definition">Assigned to:</strong>
-										<span class="info-content">
-											<span class="user-malcolm-reynolds">You</span>
-											<span class="user-simon-tam">Simon Tam</span>
-										</span>
-									</li>
-									<li>
-										<strong class="info-definition">Due:</strong>
-										<span class="info-content">Jan 31, 2013
-										</span>
-									</li>
-									<li>
-										<strong class="info-definition">Status:</strong>
-										<span class="info-content">
-											<span class="status-progress">In Progress</span>
-										</span>
-									</li>
-								</ul>
-								<h3>Time:</h3>
-								<ul class="pills">
-									<li class="pill">
-										<span class="timed-when">Jan, 20</span>
-										for
-										<span class="timed-length-h">1h</span>
-										<span class="timed-length-m">15m</span>
-										at
-										<span class="timed-time">8:37am</span>
-										<a href="#">X</a>
-									</li>
-								</ul>
-								And 4 hours from <span class="user-simon-tam">Simon Tam</span>
-								<hr>
-								<button>Edit</button>
-								
+
+					<form>
+						<fieldset>
+							<legend>My Info</legend>
+							<div class="f-block">
+								<label>Login/Password:</label>
+								<input placeholder="">
+								<span>A confirmation email will be sent.</span>
 							</div>
-						</div> <!-- col col -->
-					</div> <!-- /grid wrap -->
+							<div class="f-block">
+								<label>Name</label>
+								<input placeholder="First Name">
+								<input placeholder="Last Name">
+							</div>
+							<div class="f-block">
+								<label>Default Hourly Rate:</label>
+								$<input placeholder="">.<sup>00</sup>
+							</div>
+							<div class="f-block">
+								<label>Password</label>
+								<input placeholder="once">
+								<input placeholder="and again">
+								<span>Longer than 8 characters.  Number, capitol and punctuation suggested.</span>
+							</div>
+							
+						</fieldset>
+					</form>
+
+					<hr>
+					<button>Edit</button>
 				</div>
 			</div>
 		</div>

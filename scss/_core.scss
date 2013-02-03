@@ -137,6 +137,7 @@
 	}
 
 /* --- Tables */
+	/*
 	table {
 		border-top: 1px solid #ccc;
 		border-left: 1px solid #ccc;
@@ -152,6 +153,7 @@
 			background: #eee;
 		}
 	}
+	*/
 
 /* --- Forms */
 // Base styles. grabbed from here: http://www.getskeleton.com/ and modified
@@ -159,6 +161,7 @@
 		margin-bottom: 1em; }
 	fieldset {
 		margin-bottom: 1em; }
+	/*
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
@@ -222,3 +225,4 @@
 			@include box-shadow(rgba(black, 0.4) 0 2px 3px, white 0 1px 0px inset);
 		}
 	}
+	*/
