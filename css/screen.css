@@ -199,7 +199,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* Compass Variables */
 /* Core framework stuff */
 /* line 65, ../scss/_functions.scss */
-.jshide, .company-selector, .compound-list .sub-list, .timer-dropdown { display: none; }
+.jshide, .company-selector, .compound-list .sub-list, .dropdown, .timer-dropdown { display: none; }
 
 @font-face { font-family: 'Avenir'; src: url("../fonts/avenirltstdroman.woff") format("woff"); font-weight: 200; font-style: normal; }
 
@@ -618,110 +618,163 @@ body { padding-top: 4.5em; }
 
 /* Comapny Menu */
 /* line 74, ../scss/_br-core.scss */
-.company-current { padding: 0 0 1.5em 0; cursor: pointer; }
+.company-current { padding: 0 0 1.5em 0; }
 
 /* line 75, ../scss/_br-core.scss */
+.company-name { cursor: pointer; }
+
+/* line 76, ../scss/_br-core.scss */
 .company-selector { background: #666666; color: #dddddd; overflow: hidden; margin-bottom: 1.5em; }
 
-/* line 86, ../scss/_br-core.scss */
+/* line 87, ../scss/_br-core.scss */
 .company-list { margin: 0 0 -100em 0; padding: 0 0 100em 0; border-left: 1px solid #333333; border-right: 1px solid #333333; background: #4d4d4d; }
-/* line 94, ../scss/_br-core.scss */
+/* line 95, ../scss/_br-core.scss */
 .company-list > li { margin: 0 -1px 0 0; padding: 1em 0.5em; display: block; list-style: none; border-bottom: 1px solid #333333; border-right: 1px solid #333333; cursor: pointer; -moz-transition: all 0.15s ease-out; -webkit-transition: all 0.15s ease-out; -ms-transition: all 0.15s ease-out; transition: all 0.15s ease-out; -webkit-transform: translate3d(0px, 0px, 0px); }
-/* line 104, ../scss/_br-core.scss */
+/* line 105, ../scss/_br-core.scss */
 .company-list > li:hover { background: #595959; }
-/* line 107, ../scss/_br-core.scss */
+/* line 108, ../scss/_br-core.scss */
 .company-list > li.active { color: #fff; background: #666666; border-right-color: #666666; }
 
-/* line 115, ../scss/_br-core.scss */
+/* line 116, ../scss/_br-core.scss */
 .company-meta { padding-top: 2em; padding-bottom: 2em; }
 
 /* --- UI elements */
-/* Nav List */
-/* line 124, ../scss/_br-core.scss */
+/* Nav List - left column */
+/* line 125, ../scss/_br-core.scss */
 .nav-list { border: 1px solid #cccccc; border-right: 0; box-shadow: 0 2px 0 #eeeeee; margin: 0; padding: 0; cursor: pointer; }
-/* line 132, ../scss/_br-core.scss */
+/* line 133, ../scss/_br-core.scss */
 .nav-list .list-name { display: block; padding: .5em; border-top: 1px solid #cccccc; }
-/* line 140, ../scss/_br-core.scss */
+/* line 141, ../scss/_br-core.scss */
 .nav-list li { list-style: none; background: #eee; }
-/* line 143, ../scss/_br-core.scss */
+/* line 144, ../scss/_br-core.scss */
 .nav-list li:first-child .list-name { border-top: 0 none; }
-/* line 146, ../scss/_br-core.scss */
+/* line 147, ../scss/_br-core.scss */
 .nav-list li.active { background: #fff; }
 
 /* Compound List */
-/* line 153, ../scss/_br-core.scss */
+/* line 154, ../scss/_br-core.scss */
 .compound-list { border-radius: 3px; border: 1px solid #cccccc; margin: 0; padding: 0; cursor: pointer; }
-/* line 160, ../scss/_br-core.scss */
+/* line 161, ../scss/_br-core.scss */
 .compound-list li { list-style: none; }
-/* line 164, ../scss/_br-core.scss */
-.compound-list li:first-child .list-name { border-radius: 2px 2px 0 0; }
 /* line 165, ../scss/_br-core.scss */
+.compound-list li:first-child .list-name { border-radius: 2px 2px 0 0; }
+/* line 166, ../scss/_br-core.scss */
 .compound-list li:last-child .list-name { border-radius: 0 0 2px 2px; }
-/* line 168, ../scss/_br-core.scss */
-.compound-list li.active:last-child .list-name { border-radius: 0; }
 /* line 169, ../scss/_br-core.scss */
+.compound-list li.active:last-child .list-name { border-radius: 0; }
+/* line 170, ../scss/_br-core.scss */
 .compound-list li.active:last-child .sub-list { border-radius: 0 0 2px 2px; }
-/* line 174, ../scss/_br-core.scss */
+/* line 175, ../scss/_br-core.scss */
 .compound-list .list-name { display: block; padding: .5em; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd)); background-image: -webkit-linear-gradient(#eeeeee, #dddddd); background-image: -moz-linear-gradient(#eeeeee, #dddddd); background-image: -o-linear-gradient(#eeeeee, #dddddd); background-image: linear-gradient(#eeeeee, #dddddd); -webkit-box-shadow: white 0 1px 0px inset; -moz-box-shadow: white 0 1px 0px inset; box-shadow: white 0 1px 0px inset; }
-/* line 181, ../scss/_br-core.scss */
+/* line 182, ../scss/_br-core.scss */
 .compound-list .sub-list { margin: 0; padding: 0; background: #666666; color: #dddddd; }
-/* line 189, ../scss/_br-core.scss */
+/* line 190, ../scss/_br-core.scss */
 .compound-list .sub-name { font-weight: normal; }
 
 /* Task table */
-/* line 195, ../scss/_br-core.scss */
+/* line 196, ../scss/_br-core.scss */
 .detail-veiw { padding: 1em; border-radius: 4px; background: #eee; border: 1px solid #cccccc; }
 
 /* Pills */
-/* line 203, ../scss/_br-core.scss */
+/* line 204, ../scss/_br-core.scss */
 .pills { padding: 0; margin: 0; overflow-x: auto; }
 
-/* line 209, ../scss/_br-core.scss */
+/* line 210, ../scss/_br-core.scss */
 .pill { list-style: none; font-size: 80%; padding: 0.15em 0.25em 0 0.25em; border-radius: .25em; border: 1px solid #666666; background: #aaa; margin: .25em; float: left; white-space: nowrap; }
-/* line 220, ../scss/_br-core.scss */
+/* line 221, ../scss/_br-core.scss */
 .pill a { font-weight: bold; border-left: 1px solid #666666; display: inline-block; text-decoration: none; color: #000; padding: 0.15em 0.25em 0.15em 0.25em; margin: -0.15em -0.25em 0 0.25em; border-radius: 0 0.15em 0.15em 0; }
-/* line 230, ../scss/_br-core.scss */
+/* line 231, ../scss/_br-core.scss */
 .pill a:hover { background: #777; color: #fff; }
 
-/* Timer */
-/* line 240, ../scss/_br-core.scss */
-.timer-dropdown { position: absolute; top: 2.5em; right: 0; width: 600px; border: 5px transparent solid; border-radius: 5px; background: rgba(51, 51, 51, 0.95); -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 6px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 6px; box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 6px; }
-/* line 252, ../scss/_br-core.scss */
-.timer-dropdown .timer-selected { background: #fff; -webkit-box-shadow: black 0px 1px 1px; -moz-box-shadow: black 0px 1px 1px; box-shadow: black 0px 1px 1px; position: relative; z-index: 20; }
+/* dropdowns */
+/* line 239, ../scss/_br-core.scss */
+.dropdown { position: absolute; top: 2.35em; right: 0; border: 5px transparent solid; border-radius: 0 0 5px 5px; background: rgba(51, 51, 51, 0.85); min-width: 100%; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 6px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 6px; box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 6px; }
+/* line 251, ../scss/_br-core.scss */
+.dropdown > ul { background: #fff; -webkit-box-shadow: black 0px 1px 1px; -moz-box-shadow: black 0px 1px 1px; box-shadow: black 0px 1px 1px; position: relative; z-index: 20; margin: 0; padding: 0; text-align: right; }
 /* line 260, ../scss/_br-core.scss */
-.timer-dropdown .timer-selected, .timer-dropdown .timer-select { width: 50%; float: left; height: 250px; overflow: auto; }
-/* line 267, ../scss/_br-core.scss */
-.timer-dropdown .panel { -webkit-transform: translate(0px, 0px); -moz-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); -o-transform: translate(0px, 0px); transform: translate(0px, 0px); position: absolute; top: 0; bottom: 0; left: 0; width: 50%; overflow: auto; -moz-transition: all 0.1s ease-out; -webkit-transition: all 0.1s ease-out; -ms-transition: all 0.1s ease-out; transition: all 0.1s ease-out; -webkit-transform: translate3d(0px, 0px, 0px); background: #ccc; z-index: 10; }
-/* line 282, ../scss/_br-core.scss */
-.timer-dropdown .panel ul { padding: 0; margin: 0; }
-/* line 284, ../scss/_br-core.scss */
-.timer-dropdown .panel.open { -webkit-transform: translate(100%, 0); -moz-transform: translate(100%, 0); -ms-transform: translate(100%, 0); -o-transform: translate(100%, 0); transform: translate(100%, 0); }
-/* line 288, ../scss/_br-core.scss */
-.timer-dropdown .recents { color: #fff; z-index: 5; }
-/* line 292, ../scss/_br-core.scss */
-.timer-dropdown .recents { position: absolute; top: 0; bottom: 0; left: 50%; width: 50%; overflow: auto; }
-/* line 300, ../scss/_br-core.scss */
-.timer-dropdown .recents ul { padding: 0; margin: 0; }
-/* line 305, ../scss/_br-core.scss */
-.timer-dropdown .panel, .timer-dropdown .recents, .timer-dropdown .timer-meta { padding: 1em; }
-/* line 310, ../scss/_br-core.scss */
-.timer-dropdown li, .timer-dropdown dd { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0; }
-/* line 320, ../scss/_br-core.scss */
-.timer-dropdown .time-for, .timer-dropdown .last-timed { padding: .5em; margin: 0 -0.5em 0.5em -0.5em; border: 1px solid white; }
-/* line 326, ../scss/_br-core.scss */
-.timer-dropdown .time-for { -moz-transition: all 0.15s ease-out; -webkit-transition: all 0.15s ease-out; -ms-transition: all 0.15s ease-out; transition: all 0.15s ease-out; -webkit-transform: translate3d(0px, 0px, 0px); border-radius: 2px; cursor: pointer; border-color: #eee; }
+.dropdown > ul a { color: blue !important; text-shadow: 0 0 0 transparent !important; }
+/* line 264, ../scss/_br-core.scss */
+.dropdown > ul li { padding: 0.25em 0.5em; list-style: none; border-top: 1px solid #cccccc; }
+/* line 269, ../scss/_br-core.scss */
+.dropdown > ul li:first-child { border-top: none; }
+
+/* line 279, ../scss/_br-core.scss */
+.nav-dropdown > ul a { display: block; padding: 0.25em 0.5em; }
+/* line 283, ../scss/_br-core.scss */
+.nav-dropdown > ul a:hover { background: #eee; }
+/* line 287, ../scss/_br-core.scss */
+.nav-dropdown > ul li { padding: 0; }
+
+/* line 294, ../scss/_br-core.scss */
+li:hover .hover-dropdown { display: block; z-index: 1000; }
+
+/* line 301, ../scss/_br-core.scss */
+.alerts > ul { text-align: left; font-size: 85%; }
+/* line 304, ../scss/_br-core.scss */
+.alerts small { display: block; color: grey; }
+
+/* Timer */
+/* line 312, ../scss/_br-core.scss */
+.timer-dropdown { position: absolute; top: 2.5em; right: 0; width: 600px; border: 5px transparent solid; border-radius: 5px; background: rgba(51, 51, 51, 0.95); -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 6px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 6px; box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 6px; }
+/* line 324, ../scss/_br-core.scss */
+.timer-dropdown .timer-selected { background: #fff; -webkit-box-shadow: black 0px 1px 1px; -moz-box-shadow: black 0px 1px 1px; box-shadow: black 0px 1px 1px; position: relative; z-index: 20; }
 /* line 332, ../scss/_br-core.scss */
+.timer-dropdown .timer-selected, .timer-dropdown .timer-select { width: 50%; float: left; height: 250px; overflow: auto; }
+/* line 339, ../scss/_br-core.scss */
+.timer-dropdown .panel { -webkit-transform: translate(0px, 0px); -moz-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); -o-transform: translate(0px, 0px); transform: translate(0px, 0px); position: absolute; top: 0; bottom: 0; left: 0; width: 50%; overflow: auto; -moz-transition: all 0.1s ease-out; -webkit-transition: all 0.1s ease-out; -ms-transition: all 0.1s ease-out; transition: all 0.1s ease-out; -webkit-transform: translate3d(0px, 0px, 0px); background: #ccc; z-index: 10; }
+/* line 354, ../scss/_br-core.scss */
+.timer-dropdown .panel ul { padding: 0; margin: 0; }
+/* line 356, ../scss/_br-core.scss */
+.timer-dropdown .panel.open { -webkit-transform: translate(100%, 0); -moz-transform: translate(100%, 0); -ms-transform: translate(100%, 0); -o-transform: translate(100%, 0); transform: translate(100%, 0); }
+/* line 360, ../scss/_br-core.scss */
+.timer-dropdown .recents { color: #fff; z-index: 5; }
+/* line 364, ../scss/_br-core.scss */
+.timer-dropdown .recents { position: absolute; top: 0; bottom: 0; left: 50%; width: 50%; overflow: auto; }
+/* line 372, ../scss/_br-core.scss */
+.timer-dropdown .recents ul { padding: 0; margin: 0; }
+/* line 377, ../scss/_br-core.scss */
+.timer-dropdown .panel, .timer-dropdown .recents, .timer-dropdown .timer-meta { padding: 1em; }
+/* line 382, ../scss/_br-core.scss */
+.timer-dropdown li, .timer-dropdown dd { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0; }
+/* line 392, ../scss/_br-core.scss */
+.timer-dropdown .time-for, .timer-dropdown .last-timed { padding: .5em; margin: 0 -0.5em 0.5em -0.5em; border: 1px solid white; }
+/* line 398, ../scss/_br-core.scss */
+.timer-dropdown .time-for { -moz-transition: all 0.15s ease-out; -webkit-transition: all 0.15s ease-out; -ms-transition: all 0.15s ease-out; transition: all 0.15s ease-out; -webkit-transform: translate3d(0px, 0px, 0px); border-radius: 2px; cursor: pointer; border-color: #eee; }
+/* line 404, ../scss/_br-core.scss */
 .timer-dropdown .time-for:hover { -webkit-box-shadow: #cccccc 0px 1px 2px; -moz-box-shadow: #cccccc 0px 1px 2px; box-shadow: #cccccc 0px 1px 2px; border-color: #aaa; }
-/* line 338, ../scss/_br-core.scss */
+/* line 410, ../scss/_br-core.scss */
 .timer-dropdown .timer-controls { background: #eee; padding: .5em; text-align: right; }
-/* line 344, ../scss/_br-core.scss */
+/* line 416, ../scss/_br-core.scss */
 .timer-dropdown .timer-controls .control, .timer-dropdown .timer-controls .timer-time { display: inline-block; }
-/* line 347, ../scss/_br-core.scss */
+/* line 419, ../scss/_br-core.scss */
 .timer-dropdown .timer-controls .timer-time { float: left; }
 
-/* line 354, ../scss/_br-core.scss */
+/* line 426, ../scss/_br-core.scss */
 .populate-list { padding: 0; }
-/* line 357, ../scss/_br-core.scss */
+/* line 429, ../scss/_br-core.scss */
 .populate-list li { list-style-type: none; cursor: pointer; }
-/* line 360, ../scss/_br-core.scss */
+/* line 432, ../scss/_br-core.scss */
 .populate-list li:before { content: '\2039\00a0\00a0'; }
+
+/* line 440, ../scss/_br-core.scss */
+.alert { border: #82bed6 1px solid; border-radius: 3px; box-shadow: 0px 2px 3px #eeeeee; padding: 1em; margin: 1em 0; background: #C2EEFF; }
+
+/* line 448, ../scss/_br-core.scss */
+.paper { border-radius: 3px; box-shadow: 0px 2px 3px #eeeeee, 0 0 20px #eeeeee inset; background: #fefefe; border: 1px solid #cccccc; padding: 1.5em; margin: 1em 0; }
+/* line 456, ../scss/_br-core.scss */
+.paper *:first-child { margin-top: 0; }
+
+/* line 460, ../scss/_br-core.scss */
+.inactive { color: #ccc; }
+
+/* line 463, ../scss/_br-core.scss */
+#footer { color: #aaa; padding: 3em 0; }
+
+/* line 473, ../scss/_br-core.scss */
+table.data-table, table.data-table tr, table.data-table td, table.data-table th { background: none; border: 0px none; }
+/* line 477, ../scss/_br-core.scss */
+table.data-table .t-client td { font-weight: bold; padding-top: 1em; }
+/* line 481, ../scss/_br-core.scss */
+table.data-table .t-task td { padding-left: 1.5em; padding-right: 1.5em; }
+/* line 485, ../scss/_br-core.scss */
+table.data-table .t-totals td { border-top: 3px #666666 double; border-bottom: 0; }

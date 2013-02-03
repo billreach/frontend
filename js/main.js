@@ -3,7 +3,12 @@ $(document).ready(function() {
 /*
  * Company Select
  */
-	$('.company-current').click(function(){
+	$('.company-menu').click(function(){
+		
+		// TODO.  change this to CSS transformy thing with class swap.
+		$('.company-selector').slideToggle('fast');
+	});
+	$('h1 .company-name').click(function(){
 		
 		// TODO.  change this to CSS transformy thing with class swap.
 		$('.company-selector').slideToggle('fast');

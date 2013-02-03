@@ -260,60 +260,73 @@
 					<h1>Invoices for <span class="company-name">Company Name</span></h1>
 					<hr />
 					
-						<!-- I'll probably want to push this one level deeper past a top-level dashboard. -->
-						<h2>Unbilled</h2>
-						<p>The next invoice is due to be sent out on <strong>Feb 28 2013</strong> and currently has <strong>$426.00</strong> billed to it. <a href="invoice.html">View Details</a></p>
-						<button>Send Early</button>
-						<button>Send Report</button>
-						<hr />
-						<h2>Awaiting Payment</h2>
-						<table cellpadding="0" border="0" cellspacing="0">
-								<thead>
-									<tr>
-										<th></th>
-										<th>Invoice Number</th>
-										<th>Sent</th>
-										<th>Amount</th>
-										<th></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>002</td>
-										<td>Jan 31 2013</td>
-										<td>$1,000</td>
-										<td><a href="invoice.html">Details</a></td>
-									</tr>
-									
-								</tbody>
-							</table>
-							<p><button>Mark as Paid</button></p>
-							<hr />
-						<h2>Paid Invoices</h2>
-						<table cellpadding="0" border="0" cellspacing="0">
-								<thead>
-									<tr>
-										<th>Invoice Number</th>
-										<th>Sent</th>
-										<th>Paid</th>
-										<th>Amount</th>
-										<th></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>001</td>
-										<td>Dec 31 2012</td>
-										<td>Jan 20 2012</td>
-										<td>$1,000</td>
-										<td><a href="invoice.html">Details</a></td>
-									</tr>
-									
-								</tbody>
-							</table>
-						<hr>
+					<!-- I'll probably want some breadcrumbs here... -->
+					<p class="alert"><strong>Projects and hours will continue to accumulate here until 2/31/2013</strong></p>
 					
+					
+					<div class="paper">
+					
+						<h2>Invoice #203</h2>
+						<div class="grid-wrap">
+							<div class="col-col">
+								<p class="inactive">
+									<strong>Sent on:</strong> 2/31/2013<br />
+									<strong>Due:</strong> 3/31/2013
+								</p>
+							</div>
+							<div class="col-col">
+								<p>
+									<strong>Hours:</strong> 15<br />
+									<strong>Rate:</strong> $100/hour<br />
+									<strong>Amount Due:</strong> $1,500 USD
+								</p>
+							</div>
+						</div>
+						
+						<hr>
+						
+						<table class="data-table" cellpadding="0" border="0" cellspacing="0">
+							<thead>
+								<tr>
+									<th>Project</th>
+									<th>Hours</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="t-client">
+									<td>Client Name</td>
+									<td></td>
+								</tr>
+								<tr class="t-project">
+									<td>Project Name</td>
+									<td></td>
+								</tr>
+								<tr class="t-task">
+									<td>Design</td>
+									<td>3:15 hours</td>
+								</tr>
+								<tr class="t-task">
+									<td>Code</td>
+									<td>6:00 hours</td>
+								</tr>
+								<tr class="t-task">
+									<td>Copy</td>
+									<td>1:00 hours</td>
+								</tr>
+								<tr class="t-totals">
+									<td>Project Total:</td>
+									<td>10:15 hours / $1,000 USD</td>
+								</tr>
+							</tbody>
+						</table>
+						
+						
+					</div> <!-- end Paper -->
+					
+					<hr>
+					
+					<button>Send Early</button>
+					<button>Send Report</button>
 			</div>
 		</div>
 
