@@ -24,12 +24,12 @@
 		<header id="header" class="sticky-head">
 			<div class="width">
 				<div class="head-wrap">
-					<a href="/" class="logo">
+					<a href="dashboard.html" class="logo">
 						Billreach
 					</a>
 					<ul class="nav-main">
 						<li class="active"><a href="tasks.html">Projects</a></li>
-							<li><a href="billing.html">Billing</a></li>
+						<li><a href="billing.html">Billing</a></li>
 						<!-- <li><a href="#connections">Connections &amp; Users</a></li> -->
 					</ul>
 					<ul class="nav-controls">
@@ -182,8 +182,31 @@
 							
 							</div>
 						</li>
-						<li><a href="#alerts">Alerts &#9662;</a></li>
-						<li><a href="settings.html"><!-- <img src="#" class="profile-photo"> --> Malcolm Reynolds &#9662;</a></li>
+						<li><a href="#alerts">Alerts &#9662;</a>
+							<div class="hover-dropdown dropdown alerts">
+								<ul>
+									<li>
+										<strong>Invoice #002</strong> needs to be sent.  <a href="invoice.html">Review and Send</a>
+										<small>jan 31</small>
+									</li>
+									<li class="controls">
+										<a href="#">Clear All Alerts</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="settings.html"><!-- <img src="#" class="profile-photo"> --> Malcolm Reynolds &#9662;</a>
+							<div class="hover-dropdown nav-dropdown dropdown">
+								<ul>
+									<li>
+										<a href="settings.html">Settings</a>
+									</li>
+									<li>
+										<a href="#">Logout</a>
+									</li>
+								</ul>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -299,8 +322,9 @@
 				<div class="col-main">
 					
 					<h1>Project Name</h1>
+					<p style="float:left;margin: 0 1em 1em 0"><button>New Task</button></p>
 					<p>Assigned to: <span class="user-malcolm-reynolds">You</span>, <span class="user-simon-tam">Simon Tam</span></p>
-					<hr />
+					<hr style="clear:both;" />
 					<div class="grid-wrap">
 						<div class="col-col">
 							<table cellpadding="0" border="0" cellspacing="0">

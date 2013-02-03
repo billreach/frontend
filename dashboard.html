@@ -24,11 +24,11 @@
 		<header id="header" class="sticky-head">
 			<div class="width">
 				<div class="head-wrap">
-					<a href="/" class="logo">
+					<a href="dashboard.html" class="logo">
 						Billreach
 					</a>
 					<ul class="nav-main">
-						<li class="active"><a href="tasks.html">Projects</a></li>
+						<li><a href="tasks.html">Projects</a></li>
 						<li><a href="billing.html">Billing</a></li>
 						<!-- <li><a href="#connections">Connections &amp; Users</a></li> -->
 					</ul>
@@ -182,211 +182,40 @@
 							
 							</div>
 						</li>
-						<li><a href="#alerts">Alerts &#9662;</a></li>
-						<li><a href="settings.html"><!-- <img src="#" class="profile-photo"> --> Malcolm Reynolds &#9662;</a></li>
+						<li><a href="#alerts">Alerts &#9662;</a>
+							<div class="hover-dropdown dropdown alerts">
+								<ul>
+									<li>
+										<strong>Invoice #002</strong> needs to be sent.  <a href="invoice.html">Review and Send</a>
+										<small>jan 31</small>
+									</li>
+									<li class="controls">
+										<a href="#">Clear All Alerts</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="settings.html"><!-- <img src="#" class="profile-photo"> --> Malcolm Reynolds &#9662;</a>
+							<div class="hover-dropdown nav-dropdown dropdown">
+								<ul>
+									<li>
+										<a href="settings.html">Settings</a>
+									</li>
+									<li>
+										<a href="#">Logout</a>
+									</li>
+								</ul>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</header>
 
-		<div class="nav-company">
-			<div class="company-current">
-				<div class="width">
-					<button class="menu company-menu">Consulting company</button>
-				</div>
-			</div>
-			<div class="company-selector">
-				<div class="width">
-					<div class="grid-wrap">
-						<div class="col-aside">
-							<ul class="company-list">
-								<li class="active">Consulting company</li>
-								<li>Consulting company</li>
-								<li>Consulting company</li>
-							</ul>
-						</div>
-						<div class="col-main company-meta">
-							<h2>Company Name</h2>
-							<ul class="info-blocks">
-								<li>
-									<strong class="info-definition">Primary Contact:</strong>
-									<span class="info-content">Badger</span>
-								</li>
-								<li>
-									<strong class="info-definition">Billing Address:</strong>
-									<span class="info-content">
-										123 Fake St<br />
-										Seattle, WA
-									</span>
-								</li>
-								<li>
-									<strong class="info-definition">Billing Rate:</strong>
-									<span class="info-content">$100/ Hour</span>
-								</li>
-							</ul>
-							<button>Edit</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+
 
 		<div class="width">
-			<div class="grid-wrap">
-				<div class="col-aside">
-					<ul class="compound-list">
-						<li class="active">
-							<span class="list-name">Client Name</span>
-							<ul class="sub-list">
-								<li>
-									<strong class="sub-name">Project Name</strong>
-									<span class="task-count">3</span>
-								</li>
-								<li>
-									<strong class="sub-name">Project Name</strong>
-									<span class="task-count">3</span>
-								</li>
-								<li>
-									<strong class="sub-name">Project Name</strong>
-									<span class="task-count">3</span>
-								</li>
-								<li>
-									<a href="#">Add Project</a>
-								</li>
-							</ul>
-						</li>
-						<li><span class="list-name">Client Name</span>
-							<ul class="sub-list">
-								<li>
-									<strong class="sub-name">Project Name</strong>
-									<span class="task-count">3</span>
-								</li>
-								<li>
-									<strong class="sub-name">Project Name</strong>
-									<span class="task-count">3</span>
-								</li>
-								<li>
-									<strong class="sub-name">Project Name</strong>
-									<span class="task-count">3</span>
-								</li>
-								<li>
-									<a href="#">Add Project</a>
-								</li>
-							</ul>
-						</li>
-						<li><span class="list-name">Client Name</span>
-							<ul class="sub-list">
-								<li>
-									<strong class="sub-name">Project Name</strong>
-									<span class="task-count">3</span>
-								</li>
-								<li>
-									<strong class="sub-name">Project Name</strong>
-									<span class="task-count">3</span>
-								</li>
-								<li>
-									<strong class="sub-name">Project Name</strong>
-									<span class="task-count">3</span>
-								</li>
-								<li>
-									<a href="#">Add Project</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<a href="#">Add Client</a> | <a href="#">Edit Clients</a>
-				</div>
-				<div class="col-main">
-					
-					<h1>Project Name</h1>
-					<p>Assigned to: <span class="user-malcolm-reynolds">You</span>, <span class="user-simon-tam">Simon Tam</span></p>
-					<hr />
-					<div class="grid-wrap">
-						<div class="col-col">
-							<table cellpadding="0" border="0" cellspacing="0">
-								<thead>
-									<tr>
-										<th></th>
-										<th>Task</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="active">
-										<td><input type="checkbox"></td>
-										<td>Task Name</td>
-										<td>
-											<span class="u-mini user-malcolm-reynolds">You</span>
-											<span class="u-mini user-simon-tam">Simon Tam</span>
-											<span class="status-progress">In Progress</span>
-										</td>
-									</tr>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>Task Name</td>
-										<td>
-											<span class="u-mini user-malcolm-reynolds">You</span>
-											<span class="u-mini user-simon-tam">Simon Tam</span>
-											<span class="status-progress">In Progress</span>
-										</td>
-									</tr>
-									<tr>
-										<td><input type="checkbox"></td>
-										<td>Task Name</td>
-										<td>
-											<span class="u-mini user-malcolm-reynolds">You</span>
-											<span class="u-mini user-simon-tam">Simon Tam</span>
-											<span class="status-progress">In Progress</span>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div> <!-- col col -->
-						<div class="col-col">
-							<div class="detail-veiw">
-								
-								<h2>Task Name</h2>
-								<ul class="info-blocks">
-									<li>
-										<strong class="info-definition">Assigned to:</strong>
-										<span class="info-content">
-											<span class="user-malcolm-reynolds">You</span>
-											<span class="user-simon-tam">Simon Tam</span>
-										</span>
-									</li>
-									<li>
-										<strong class="info-definition">Due:</strong>
-										<span class="info-content">Jan 31, 2013
-										</span>
-									</li>
-									<li>
-										<strong class="info-definition">Status:</strong>
-										<span class="info-content">
-											<span class="status-progress">In Progress</span>
-										</span>
-									</li>
-								</ul>
-								<h3>Time:</h3>
-								<ul class="pills">
-									<li class="pill">
-										<span class="timed-when">Jan, 20</span>
-										for
-										<span class="timed-length-h">1h</span>
-										<span class="timed-length-m">15m</span>
-										at
-										<span class="timed-time">8:37am</span>
-										<a href="#">X</a>
-									</li>
-								</ul>
-								And 4 hours from <span class="user-simon-tam">Simon Tam</span>
-								<hr>
-								<button>Edit</button>
-								
-							</div>
-						</div> <!-- col col -->
-					</div> <!-- /grid wrap -->
-				</div>
-			</div>
+			recent tasks.
 		</div>
 
 

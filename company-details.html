@@ -24,7 +24,7 @@
 		<header id="header" class="sticky-head">
 			<div class="width">
 				<div class="head-wrap">
-					<a href="/" class="logo">
+					<a href="dashboard.html" class="logo">
 						Billreach
 					</a>
 					<ul class="nav-main">
@@ -182,8 +182,31 @@
 							
 							</div>
 						</li>
-						<li><a href="#alerts">Alerts &#9662;</a></li>
-						<li class="active"><a href="settings.html"><!-- <img src="#" class="profile-photo"> --> Malcolm Reynolds &#9662;</a></li>
+						<li><a href="#alerts">Alerts &#9662;</a>
+							<div class="hover-dropdown dropdown alerts">
+								<ul>
+									<li>
+										<strong>Invoice #002</strong> needs to be sent.  <a href="invoice.html">Review and Send</a>
+										<small>jan 31</small>
+									</li>
+									<li class="controls">
+										<a href="#">Clear All Alerts</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="active"><a href="settings.html"><!-- <img src="#" class="profile-photo"> --> Malcolm Reynolds &#9662;</a>
+							<div class="hover-dropdown nav-dropdown dropdown">
+								<ul>
+									<li>
+										<a href="settings.html">Settings</a>
+									</li>
+									<li>
+										<a href="#">Logout</a>
+									</li>
+								</ul>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
